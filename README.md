@@ -6,7 +6,7 @@ Request Synchronizer for node.js + express
 Для работы используется глобальный класс **RequestSynchronizer** и его статический метод **resolveRequest**
 
 **resolveRequest** принимает следующие параметры:
-1.**reqData: RequestData** - **RequestData** - объявлено в **request-synchronizer**.
+1. **reqData: RequestData** - **RequestData** - объявлено в **request-synchronizer**.
 
 **RequestData** состоит из:
 1. **func: RequestFunction** - **RequestFunction** - объявлено в **request-synchronizer**;
