@@ -43,8 +43,30 @@ const getSimpleHandler = async (req, res) => {
   res.status(500).end()
 }
 
+let complexCounter = 0
+
+const getComplexHandler = async (req, res) => {
+  // Can be validated before the request is added to the queue
+  const data = req.body
+  const counter = complexCounter
+
+  await getComplex(data)
+
+  complexCounter = counter + 1
+}
+
 app.get('/simple', async (req: Request, res: Response) => {
   RequestSynchronizer.resolveRequest({ func: getSimpleHandler, req, res, })
+})
+
+app.get('/complex', async (req: Request, res: Response) => {
+  RequestSynchronizer.resolveRequest({ func: getComplexHandler, req, res, })
+
+  res.status(200).end()
+})
+
+app.get('/complex-result', async (req: Request, res: Response) => {
+  res.json({ complexCounter }).status(200)
 })
 
 app.listen(port, () => console.log('server started'))

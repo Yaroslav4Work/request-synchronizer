@@ -12,6 +12,8 @@ export default class RequestSynchronizer {
   private static lastPromise: Promise<any> = new Promise((resolve) => resolve(null))
 
   public static resolveRequest (reqData: RequestData) {
-    RequestSynchronizer.lastPromise.then(() => reqData.func(reqData.req, reqData.res))
+    RequestSynchronizer.lastPromise.then(
+      () => RequestSynchronizer.lastPromise = reqData.func(reqData.req, reqData.res)
+    )
   }
 }
