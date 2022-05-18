@@ -2,7 +2,7 @@
   "name": "request-synchronizer",
   "version": "1.0.0",
   "description": "Request Synchronizer for node.js + express",
-  "main": "index.js",
+  "main": "/src/request-synchronizer.ts",
   "scripts": {
     "test": "tsc && node ./dist/test.js"
   },
