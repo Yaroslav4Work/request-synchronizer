@@ -2,6 +2,9 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true
   }
 }
