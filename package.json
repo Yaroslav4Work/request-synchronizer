@@ -2,18 +2,18 @@
   "name": "request-synchronizer",
   "version": "1.1.0",
   "description": "Request Synchronizer for node.js + express",
-  "main": "/dist/request-synchronizer",
+  "main": "./lib/request-synchronizer",
   "scripts": {
-    "test": "tsc && node ./dist/test.js"
+    "test": "tsc && node ./lib/test.js"
   },
   "keywords": [],
-  "author": "Yaroslav Pilichev",
+  "author": "Yaroslav Pilichev <yaroslav4work@gmail.com>",
   "license": "BSD",
   "type": "commonjs",
   "files": [
     "LICENSE",
     "README.md",
-    "dist"
+    "lib"
   ],
   "repository": {
     "type": "git",
